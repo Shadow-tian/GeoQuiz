@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GeoQuiz</string>
+
+    <string name="true_button">TRUE</string>
+    <string name="false_button">FALSE</string>
+    <string name="next_button">下一题</string>
+    <string name="refersh_button">重新回答</string>
+    <string name="commit_button">交卷</string>
+    <string name="back_button">上一题</string>
+    <string name="correct_toast">正确!</string>
+    <string name="incorrect_toast">错误!</string>
+
+    <string name="question_1">1.由于房屋的形体庞大，房屋施工图一般都是用放大的比例画出的？</string>
+    <string name="question_2">2.除标高和总平面图中的尺寸以米为单位外，其余尺寸单位均以毫米？</string>
+    <string name="question_3">3.空间的两个点位于一条直线上，两点的投影线所垂直的投影面上的投影重合为一点，称此两点为重影点？</string>
+    <string name="question_4">4.正投影的特性有真实性、类似性、积聚性和缩小性？</string>
+    <string name="question_5">5.建筑详图是建筑细部的施工图？</string>
+    <string name="question_6">6.屋顶平面图就是屋顶外形的水平投影图？</string>
+</resources>
