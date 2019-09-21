@@ -12,12 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
 {
-    private Button mTrueButton;
-    private Button mFalseButton;
-    private Button mNextButton;
     private Button mBackButton;
-    private Button mRefershButton;
-    private Button mCommitButton;
     private TextView mTextView;
     private TextView mAnsweredText;
     private int mCurrentIndex;
@@ -63,6 +58,12 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button mTrueButton;
+        Button mFalseButton;
+        Button mNextButton;
+        Button mRefershButton;
+        Button mCommitButton;
+
         if(savedInstanceState != null)
         {
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX,0);
@@ -77,11 +78,7 @@ public class MainActivity extends AppCompatActivity
 
         Configuration mConfiguration = this.getResources().getConfiguration(); //获取设置的配置信息
         int forward = mConfiguration.orientation; //获取屏幕方向
-        if(forward == mConfiguration.ORIENTATION_LANDSCAPE)     //如果是横屏
-        {
-            ;
-        }
-        else if(forward == mConfiguration.ORIENTATION_PORTRAIT)     //如果是竖屏
+        if(forward == mConfiguration.ORIENTATION_PORTRAIT)     //如果是竖屏
         {
             mBackButton = (Button)findViewById(R.id.back_button);
         }
@@ -149,7 +146,7 @@ public class MainActivity extends AppCompatActivity
 
                     }
                 }
-                if(finishFlag == true)
+                if(finishFlag)
                 {
                     int persent = correctNum*100/mQuestionBank.length;
                     String resultAnswer = "共"+ mQuestionBank.length + "道题，您答对" + correctNum + "道 正确率为" +persent+ "%";
@@ -246,7 +243,7 @@ public class MainActivity extends AppCompatActivity
                 mToast.setGravity(Gravity.CENTER, 0, 0);
                 mToast.show();
                 */
-                mAnswered[mCurrentIndex] &= ~(1<<0);    //标记为错误
+                mAnswered[mCurrentIndex] &= ~(1);    //标记为错误
                 showTextToast("回答错误!!!");
             }
         }
